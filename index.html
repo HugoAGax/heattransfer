@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Heat Transfer</title>
+  </head>
+  <body>
+    <div class="mini-cont">
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <img class="img-fluid diag" src="img/diag-ht.svg">
+                    </div>
+                    <div class="row">
+                        <form class="col-12 no-gutters">
+                            <div class="form-row">
+                                <div class="col-2 spc-font">
+                                    <p class="text-center">\(L\)</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="number" class="form-control form-control-sm" placeholder="Wall Length"></input>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-2 spc-font">
+                                    <p class="text-center">\(t\)</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="number" class="form-control form-control-sm" placeholder="Wall Thickness"></input>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-2 spc-font">
+                                    <p class="text-center">\(T_{C \infty}\)</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="number" class="form-control form-control-sm" placeholder="Cold Fluid Temperature"></input>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-2 spc-font">
+                                    <p class="text-center">\(T_{H \infty}\)</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="number" class="form-control form-control-sm" placeholder="Hot Fluid Temperature"></input>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-2 spc-font">
+                                    <p class="text-center">\(n_x\)</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="number" class="form-control form-control-sm" placeholder="Horizontal Nodes"></input>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-2 spc-font">
+                                    <p class="text-center">\(n_y\)</p>
+                                </div>
+                                <div class="col-10">
+                                    <input type="number" class="form-control form-control-sm" placeholder="Vertical Nodes"></input>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-2 spc-font">
+                                    <p class="text-center">\(k\)</p>
+                                </div>
+                                <div class="col-10">
+                                    <select class="form-control form-control-sm">
+                                        <option>Copper</option>
+                                        <option>Aluminum</option>
+                                        <option>Gold</option>
+                                        <option>Iron</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button class="btn btn-sm btn-primary btn-block badge-pill" onclick="calTemp()" type="button">Calculate</button>
+                            </div>
+                            <div class="row">
+                                <small class="text-muted text-center col-12">Por: Hugo Alejandro Gaxiola Cuevas</small>
+                            </div>
+                        </form>
+                    </div></div>
+                <div class="col-md-8">
+                    <div class="row graph">
+                        <!--<canvas id="myChart"></canvas>-->
+                    </div>
+                    <div class="row">
+                        <div class="table"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/math.min.js"></script>
+    <script src="js/Chart.bundle.js"></script>
+    <script src="js/calculations.js"></script>
+
+  </body>
+</html>
